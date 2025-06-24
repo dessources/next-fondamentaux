@@ -1,13 +1,19 @@
-import Link from 'next/link'
+import Link from "next/link"
 
 const Page = () => {
   return (
     <div>
       {/* 🐶 Applique le style global `.title` sur l'élément <p> */}
-      <p>Je suis un développeur FullStack Next</p>
+      <p className="title">Je suis un développeur FullStack Next</p>
       {/* 🐶 Applique le style `tailwind` sur le composant `<Link>` pour le transformer en bouton*/}
-      <Link href="/exercise/account">Account</Link>
-      {/* 🐶 Tu peux wrapper d'une `div` avec 'mt-4' pour ajouter un margin top sur le button*/}
+      <div className="mt-4">
+        <Link
+          href="/exercise/account"
+          className="hover:bg-gray-10 rounded border border-gray-400 bg-white px-4 py-2 font-bold text-gray-800"
+        >
+          Account
+        </Link>
+      </div>
 
       {/* 🐶 Pense à regarder l'exercice bonus*/}
     </div>
